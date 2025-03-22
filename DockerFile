@@ -1,0 +1,11 @@
+# שימוש בתמונה הקלה של Nginx
+FROM nginx:alpine
+
+# העתקת כל הקבצים מתקיית הפרויקט אל תוך תיקיית השרת
+COPY . /usr/share/nginx/html
+
+# פתיחת פורט 80 להרצת האתר
+EXPOSE 80
+
+# הפעלת Nginx
+CMD ["nginx", "-g", "daemon off;"]
