@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" }
+  ],
+  "builds": [],
+  "routes": [],
+  "outputDirectory": "HTML"
+}
