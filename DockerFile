@@ -1,11 +1,26 @@
-# שימוש בתמונה הקלה של Nginx
-FROM nginx:alpine
+# שימוש בתמונה הרשמית של Nginx
+FROM nginx:latest
 
-# העתקת כל הקבצים מתקיית הפרויקט אל תוך תיקיית השרת
+# העתקת קובץ nginx.conf
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# העתקת כל קבצי האתר מלבד קבצים לא רלוונטיים
 COPY . /usr/share/nginx/html
 
-# פתיחת פורט 80 להרצת האתר
-EXPOSE 80
+# חשיפת הפורט 80
+EXPOSE 8080
 
-# הפעלת Nginx
+# הרצת השרת
 CMD ["nginx", "-g", "daemon off;"]
+
+
+# COPY ./HTML /usr/share/nginx/html
+# COPY ./CSS /usr/share/nginx/html
+# COPY ./JS /usr/share/nginx/html
+# COPY ./fonts /usr/share/nginx/html
+# COPY ./cosmeticsPictures /usr/share/nginx/html
+# COPY ./Data /usr/share/nginx/html
+# COPY ./DataPictures /usr/share/nginx/html
+# COPY ./generalPictures /usr/share/nginx/html
+# COPY ./headerAarray /usr/share/nginx/html
+

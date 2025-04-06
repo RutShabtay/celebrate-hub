@@ -147,7 +147,7 @@ document.querySelectorAll('.navbar-item').forEach(item => {
 
     }
     document.querySelector("#centeralBoard").onclick = () => {
-        window.location.href = "/HTML/Index.html";
+        window.location.href = "./index.html";
 
     }
 
